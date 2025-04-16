@@ -26,8 +26,7 @@ let menuAnimation = gsap.to(".menu-i", {
       scrollTrigger: {
         trigger: workEl,
         start: "top 70%", // When the top of the element hits 80% of viewport
-        toggleActions: "play none none reverse",
-        markers: true, // remove in production
+        toggleActions: "play none none reverse",// remove in production
       },
       opacity: 0,
       y: 50,
