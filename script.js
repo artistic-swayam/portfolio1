@@ -1,5 +1,16 @@
+import { Application } from 'https://unpkg.com/@splinetool/runtime@0.9.505/build/runtime.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const canvas = document.getElementById('canvas3d');
+  const app = new Application(canvas);
+  app.load('https://prod.spline.design/e1ahrrOCFKVpYV0k/scene.splinecode');
+});
+
+
 const tl = gsap.timeline();
 gsap.registerPlugin(ScrollTrigger);
+
+
 
 //gsap animation
 let menuAnimation = gsap.to(".menu-i", {
@@ -26,7 +37,7 @@ let menuAnimation = gsap.to(".menu-i", {
       scrollTrigger: {
         trigger: workEl,
         start: "top 70%", // When the top of the element hits 80% of viewport
-        toggleActions: "play none none reverse",
+
       },
       opacity: 0,
       y: 50,
