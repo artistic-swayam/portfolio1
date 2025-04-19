@@ -219,7 +219,7 @@ i{
     display: flex;
     align-items: center;
     /* justify-content: center; background: radial-gradient(circle at center center, #ff8f40 0%, #271700 40%, #0a0022 100%);*/
-    background: radial-gradient(circle at center center, #ff6a00 0%, #271700 40%, #0a0022 100%);
+    background: radial-gradient(circle at center center, #ff8f40 0%, #271700 40%, #0a0022 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 150% 150%;
