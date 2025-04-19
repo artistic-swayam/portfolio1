@@ -1,10 +1,10 @@
-import { Application } from 'https://unpkg.com/@splinetool/runtime@0.9.505/build/runtime.js';
+// import { Application } from 'https://unpkg.com/@splinetool/runtime@0.9.505/build/runtime.js';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const canvas = document.getElementById('canvas3d');
-  const app = new Application(canvas);
-  app.load('https://prod.spline.design/e1ahrrOCFKVpYV0k/scene.splinecode');
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   const canvas = document.getElementById('canvas3d');
+//   const app = new Application(canvas);
+//   app.load('https://prod.spline.design/e1ahrrOCFKVpYV0k/scene.splinecode');
+// });
 
 
 const tl = gsap.timeline();
@@ -45,12 +45,22 @@ let menuAnimation = gsap.to(".menu-i", {
       ease: "power2.out"
     });
   });
+     //menu animation
+const menu = document.querySelector('.overlay');
+menu.addEventListener('click', () => {
+  menu.classList.toggle('active');
+  if (menu.classList.contains('active')) {
+    gsap.to('.overlay', { duration: 0.5, opacity: 1 });
+    gsap.to('.menu-i', { duration: 0.5, opacity: 1 });
+    gsap.to('.calendly-badge-content', { duration: 0.5, opacity: 0 });
+  } else {
+    gsap.to('.overlay', { duration: 0.5, opacity: 0 });
+    gsap.to('.calendly-badge-content', { duration: 0.5, opacity: 1 });
+  }
+})
   
 //lenisrr
-
-
 const lenis = new Lenis()
-
 function raf(time) {
   lenis.raf(time)
   requestAnimationFrame(raf)
