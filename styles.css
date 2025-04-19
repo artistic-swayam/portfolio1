@@ -1,169 +1,259 @@
-.calendly-badge-widget,
-.calendly-badge-widget *,
-.calendly-inline-widget,
-.calendly-inline-widget *,
-.calendly-overlay,
-.calendly-overlay * {
-    font-size: 16px;
-    line-height: 1.2em
-}
-
-.calendly-badge-widget iframe,
-.calendly-inline-widget iframe,
-.calendly-overlay iframe {
-    display: inline;
-    height: 100%;
-    width: 100%
-}
-
-.calendly-popup-content {
-    position: relative
-}
-
-.calendly-popup-content.calendly-mobile {
-    -webkit-overflow-scrolling: touch;
-    overflow-y: auto
-}
-
-.calendly-overlay {
-    background-color: #a5a5a5;
-    background-color: rgba(31, 31, 31, .4);
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 9999
-}
-
-.calendly-overlay .calendly-close-overlay {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0
-}
-
-.calendly-overlay .calendly-popup {
+*{
+    padding: 0;
+    margin: 0   ;
     box-sizing: border-box;
-    height: 90%;
-    left: 50%;
-    max-height: 700px !important;
-    max-width: 1000px;
-    min-width: 900px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    width: 80%
+}
+::-webkit-scrollbar {
+    display: none;
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('SFPRODISPLAYBOLD.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@media (max-width:975px) {
-    .calendly-overlay .calendly-popup {
-        bottom: 0;
-        height: auto;
-        left: 0;
-        max-height: none;
-        min-width: 0;
-        position: fixed;
-        right: 0;
-        top: 50px;
-        transform: none;
-        width: 100%
+@font-face {
+    font-family: 'Apple Garamond';
+    src: url('AppleGaramond.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+:root{
+    --1st: #131313;
+    --2nd: rgb(224, 222, 222);
+    --3rd: #111196;
+    --4th: linear-gradient(to top,#000 ,#c18d2c );
+    --5th: #c17605;
+    --1st-font: 'Apple Garamond';
+    --2nd-font: 'SF Pro Display';
+    --links-pad: 20px;
+    --links-pad-small: 5px 0;
+    --link-pad: 10px 50px;
+    --link-pad-small: 5px 10px;
+    --padding-large: 100px 50px;
+    --padding-small: 50px 25px;/**/
+    --font-large: 120px;
+    --font-large-ad: 12.5vw;
+    --font-medium: 70px;
+    --font-small: 40px;
+    --font-small-ad: 8.5vw;
+    --font-tiny: 18px;
+    --font-mini: 13px;
+}
+.home{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: radial-gradient(circle at center center, #ff6a00 0%, #ff9900 30%, #0a0022 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 150% 150%;
+    animation: pulseGlow 4s ease-in-out infinite;
+}
+@keyframes pulseGlow {
+    0% {
+      background-size: 150% 150%;
     }
-}
-
-.calendly-overlay .calendly-popup .calendly-popup-content {
-    height: 100%
-}
-
-.calendly-overlay .calendly-popup-close {
-    background: url(/assets/external/close-icon.svg) no-repeat;
-    background-size: contain;
-    color: #fff;
-    cursor: pointer;
-    height: 19px;
-    position: absolute;
-    right: 25px;
-    top: 25px;
-    width: 19px
-}
-
-@media (max-width:975px) {
-    .calendly-overlay .calendly-popup-close {
-        right: 15px;
-        top: 15px
+    50% {
+      background-size: 170% 170%;
     }
+    100% {
+      background-size: 150% 150%;
+    }
+  }
+.upper {
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+    padding: 1vw;
 }
-
-.calendly-badge-widget {
-    position: absolute;
-    bottom: 2vw;
-    right: 2vw;
-    z-index: 9998
+.lower{
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: flex-end;
 }
-
-.calendly-badge-widget .calendly-badge-content {
-    border-radius: 10px;
-    box-shadow: 0 0 30px #ff6a00aa;
-    cursor: pointer;
-    display: table-cell;
-    font-size: 14px;
-    font-weight: 700;
-    height: 45px;
-    padding: 0 30px;
+.lower-text{
     text-align: center;
-    vertical-align: middle;
-    width: auto;
+    width: 100%;
+    color: var(--2nd);
+    font-family: var(--2nd-font);
+    font-size: var(--font-tiny);
+    padding: 2vw;
 }
-
-.calendly-badge-widget .calendly-badge-content.calendly-white {
-    color: #666a73
+.text{
+   height: 100%;
+   color: var(--2nd);
+   text-align: right;
 }
-
-.calendly-badge-widget .calendly-badge-content span {
-    display: block;
-    font-size: 12px
+.hero-text{
+    font-size: var(--font-large-ad);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
 }
-
-.calendly-spinner {
-    left: 0;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: -1
-}
-
-.calendly-spinner>div {
-    animation: calendly-bouncedelay 1.4s ease-in-out infinite;
-    animation-fill-mode: both;
-    background-color: #e1e1e1;
-    border-radius: 50%;
+p {
+    font-size: var(--font-tiny);
     display: inline-block;
-    height: 18px;
-    vertical-align: middle;
-    width: 18px
+    /* text-align: right; */
+}
+b{
+    font-family: var(--2nd-font);
+}
+i{
+    font-family: 'Apple Garamond';
+}
+.btn-area {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.calendly-badge-content{
+    font-size: var(--font-tiny);
+    color: var(--2nd);
+    background-color: var(--1st);
+    
+    border-radius: 10px;
+    font-family: 'SF Pro Display';
+    padding: 20px 30px;
+}
+.menu-i {
+    position: fixed;
+    top: 2vh;
+    background-color: var(--1st);
+    box-shadow: 0 0 30px #ff6a00aa;
+    right: 2vw;
+    opacity: 0;
+    border-radius: 10px;
+    padding: 1vw;
+    color: var(--2nd);
+    font-size: 30px;
+}
+.works{    
+    height: 200vh;
+}
+.works{
+    background-color: var(--1st);
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: var(--padding-large);
+}
+.work-row{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;/* 9u w8r*/
+    width: 100%;
+}
+.one{
+    background-image: url("Capture56754.jpg");
+    background-size: cover;
+}
+.two{
+    background-image: url("Capture11.PNG");
+    background-size: cover;
+}
+.three{
+    background-image: url("Capture56754.jpg");
+    background-size: cover;
+}
+.work{
+    
+    background-repeat: no-repeat;
+    background-size: 120%;
+    will-change: background-position;
+    height: 50vh;
+    width: 100%;
+    border-radius: 10px;
 }
 
-.calendly-spinner .calendly-bounce1 {
-    animation-delay: -.32s
+.brand{
+    text-align: left;
+    font-size: var(--font-medium);
+    padding: var(--links-pad);
+    font-family: var(--2nd-font);
+}
+.type {
+    display: block;
+    text-align: start;
+    font-size: var(--font-tiny);
+    font-family: var(--2nd-font);
+    padding: var(--links-pad);
+    opacity: 0.6;
+}
+.head-container{
+    width: 100%;
+    text-align: left;
+}
+.head{
+    color: var(--2nd);
+    font-family: var(--1st-font);
+    font-size: var(--font-small-ad);
+    padding: 80px 0;
 }
 
-.calendly-spinner .calendly-bounce2 {
-    animation-delay: -.16s
-}
-
-@keyframes calendly-bouncedelay {
-
-    0%,
-    80%,
-    to {
-        transform: scale(0)
+@media (max-width:900px) {
+    span h2{
+        font-size: var(--font-tiny);
     }
-
-    40% {
-        transform: scale(1)
+    .upper{
+        height: 80vh;
     }
+    .lower{
+        height: 20vh;
+    }
+    .hero-text {
+        height: 100%;
+        font-size: 17vw;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    .text {
+        height: 52%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .lower-text{
+        display: none;
+    }
+    .btn{
+        font-size: var(--font-mini);
+    }
+    .menu-i{
+        padding: 2vw;
+    }
+    .head{
+        font-size: var(--font-medium);
+        padding: 40px 0;
+    }
+    .brand{
+        font-size: var(--font-small);
+    }
+    .works{
+        height: 200vh;
+        gap: 20px;
+    }
+    .work-row{
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media (max-width:600px) {
+    .text{
+        height: 37%;
+    }
+ 
 }
