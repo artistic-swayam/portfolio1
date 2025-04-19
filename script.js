@@ -26,7 +26,7 @@ let menuAnimation = gsap.to(".menu-i", {
       scrollTrigger: {
         trigger: workEl,
         start: "top 70%", // When the top of the element hits 80% of viewport
-        toggleActions: "play none none reverse",// remove in production
+        toggleActions: "play none none reverse",
       },
       opacity: 0,
       y: 50,
@@ -56,7 +56,7 @@ lenis.on('scroll', () => {
     const middle = rect.top + rect.height / 2
     const scrollProgress = (middle - winHeight / 2) / winHeight
 
-    const parallax = scrollProgress * 100// bumped from 50 to 80 🔥
+    const parallax = scrollProgress * 40// bumped from 50 to 80 🔥
 
     if (rect.top < winHeight && rect.bottom > 0) {
       work.style.backgroundPosition = `center ${parallax}px`
