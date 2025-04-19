@@ -124,7 +124,7 @@ i{
     font-family: 'SF Pro Display';
     padding: 20px 30px;
 }
-.menu-i {
+.menu-i,.close-i {
     position: fixed;
     top: 2vh;
     background-color: var(--1st);
@@ -135,6 +135,12 @@ i{
     padding: 1vw;
     color: var(--2nd);
     font-size: 30px;
+}
+.menu-i{
+    z-index: 500;
+}
+.close-i{
+    opacity: 1;
 }
 .works{    
     height: 200vh;
@@ -204,16 +210,20 @@ i{
 
 .overlay {
     position: fixed;
+    opacity: 0;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: var(--1st);
     z-index: 1000;
-    display: flex
-;
+    display: flex;
     align-items: center;
-    /* justify-content: center; */
+    /* justify-content: center; background: radial-gradient(circle at center center, #ff8f40 0%, #271700 40%, #0a0022 100%);*/
+    background: radial-gradient(circle at center center, #ff6a00 0%, #271700 40%, #0a0022 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 150% 150%;
+    animation: pulseGlow 4s ease-in-out infinite;
 }
 .overlay-content {
     display: flex;
@@ -228,11 +238,13 @@ i{
     color: var(--2nd);
     text-decoration: none;
 }
-#canvas3d {
+/* #canvas3d {
     width: 50vw;
     height: 100vh;
+} */
+.none{
+    display: none;
 }
-
 @media (max-width:900px) {
     span h2{
         font-size: var(--font-tiny);
