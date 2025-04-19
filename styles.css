@@ -282,6 +282,9 @@ i{
         flex-direction: column;
         gap: 20px;
     }
+    .o-link{
+        font-size: var(--font-small);
+    }
 }
 @media (max-width:600px) {
     .text{
