@@ -128,7 +128,7 @@ i{
     position: fixed;
     top: 2vh;
     background-color: var(--1st);
-    box-shadow: 0 0 30px #ff6a00aa;
+    box-shadow: 0 0 5px #ff9900;
     right: 2vw;
     opacity: 0;
     border-radius: 10px;
@@ -143,7 +143,7 @@ i{
     opacity: 1;
 }
 .works{    
-    height: 200vh;
+    height: 400vh;
 }
 .works{
     background-color: var(--1st);
@@ -161,19 +161,18 @@ i{
     width: 100%;
 }
 .one{
-    background-image: url("Capture56754.jpg");
+    background-image: url("m1.png");
     background-size: cover;
 }
 .two{
-    background-image: url("Capture11.PNG");
+    background-image: url("m3.png");
     background-size: cover;
 }
 .three{
-    background-image: url("Capture56754.jpg");
+    background-image: url("m2.PNG");
     background-size: cover;
 }
 .work{
-    
     background-repeat: no-repeat;
     background-size: 120%;
     will-change: background-position;
@@ -181,10 +180,33 @@ i{
     width: 100%;
     border-radius: 10px;
 }
-
+.arrow-div {
+    position: absolute;
+    display: flex;
+    background-color: var(--2nd);
+    border-radius: 25px;
+    align-items: center;
+    bottom: 10px;
+    right: 10px;
+    height: 50px;
+}
+.arrow {
+    height: 50px;
+    border-radius: 50%;
+    text-align: right;
+    padding: 10px;
+    transform: rotate(125deg);
+    transition: 0.2s linear;
+    
+}
+.arrow:hover{
+    transform: rotate(180deg);
+}
 .brand{
     text-align: left;
-    font-size: var(--font-medium);
+    background-color: var(--2nd);
+    border-radius: 10px;
+    font-size: var(--font-small);
     padding: var(--links-pad);
     font-family: var(--2nd-font);
 }
@@ -194,7 +216,7 @@ i{
     font-size: var(--font-tiny);
     font-family: var(--2nd-font);
     padding: var(--links-pad);
-    opacity: 0.6;
+    color: #7a7a7a;
 }
 .head-container{
     width: 100%;
@@ -215,15 +237,17 @@ i{
     left: 0;
     height: 100vh;
     width: 100vw;
-    z-index: 1000;
     display: flex;
     align-items: center;
     /* justify-content: center; background: radial-gradient(circle at center center, #ff8f40 0%, #271700 40%, #0a0022 100%);*/
-    background: radial-gradient(circle at center center, #ff8f40 0%, #271700 40%, #0a0022 100%);
+    background: radial-gradient(circle at center center, #ff8f40 0%, #271700 30%, #0a0022 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 150% 150%;
-    animation: pulseGlow 4s ease-in-out infinite;
+    animation: pulseGlow 4s  infinite;
+}
+.active{
+    z-index: 1000;
 }
 .overlay-content {
     display: flex;
@@ -236,7 +260,12 @@ i{
 .o-link {
     font-size: var(--font-large);
     color: var(--2nd);
+    opacity: 0;
     text-decoration: none;
+}
+.o-link:hover{
+    color: #7a7a7a;
+    transition: 0.2s linear;
 }
 /* #canvas3d {
     width: 50vw;
@@ -283,10 +312,10 @@ i{
         padding: 40px 0;
     }
     .brand{
-        font-size: var(--font-small);
+        font-size: var(--font-tiny);
     }
     .works{
-        height: 200vh;
+        
         gap: 20px;
     }
     .work-row{
