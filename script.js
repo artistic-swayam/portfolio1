@@ -31,13 +31,11 @@ let menuAnimation = gsap.to(".menu-i", {
       }
     },
   });
-
   gsap.utils.toArray('.work').forEach((workEl) => {
     gsap.from(workEl, {
       scrollTrigger: {
         trigger: workEl,
         start: "top 70%", // When the top of the element hits 80% of viewport
-
       },
       opacity: 0,
       y: 50,
@@ -46,19 +44,34 @@ let menuAnimation = gsap.to(".menu-i", {
     });
   });
      //menu animation
+const menubtn = document.querySelector('.menu-i');
 const menu = document.querySelector('.overlay');
-menu.addEventListener('click', () => {
+const off = document.querySelector('.close-i');
+menubtn.addEventListener('click', () => {
   menu.classList.toggle('active');
+  off.classList.toggle('active');
   if (menu.classList.contains('active')) {
+    gsap.to(".o-link",{duration: 0.4,stagger:0.2,y:"-50%", opacity: 1})
     gsap.to('.overlay', { duration: 0.5, opacity: 1 });
     gsap.to('.menu-i', { duration: 0.5, opacity: 1 });
-    gsap.to('.calendly-badge-content', { duration: 0.5, opacity: 0 });
-  } else {
-    gsap.to('.overlay', { duration: 0.5, opacity: 0 });
-    gsap.to('.calendly-badge-content', { duration: 0.5, opacity: 1 });
+    gsap.to('.calendly-badge-content', { duration: 0, opacity: 0 });
+  } 
+})
+off.addEventListener('click',()=>{
+  menu.classList.toggle('active');
+  off.classList.toggle('active');
+  if (!off.classList.contains('active'))  {
+    gsap.to(".o-link",{duration: 0.2,stagger:0.2,y:"0", opacity: 0})
+    gsap.to('.overlay', { duration: 0.2, opacity: 0 });
+    gsap.to('.calendly-badge-content', { duration: 0, opacity: 1 });
   }
 })
   
+
+
+
+
+
 //lenisrr
 const lenis = new Lenis()
 function raf(time) {
