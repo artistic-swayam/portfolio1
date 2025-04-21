@@ -42,6 +42,9 @@
     --font-tiny: 18px;
     --font-mini: 13px;
 }
+.whole{
+overflow: hidden;
+}
 .home{
     height: 100vh;
     display: flex;
