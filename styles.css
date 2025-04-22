@@ -42,9 +42,6 @@
     --font-tiny: 18px;
     --font-mini: 13px;
 }
-.whole{
-overflow: hidden;
-}
 .home{
     height: 100vh;
     display: flex;
@@ -152,6 +149,8 @@ i{
 .works{
     background-color: var(--1st);
     display: flex;
+    height: 250vh;
+
     width: 100vw;
     align-items: center;
     flex-direction: column;
@@ -178,7 +177,7 @@ i{
 }
 .work,.testimonial{
     background-repeat: no-repeat;
-    background-size: 120%;
+
     will-change: background-position;
     height: 50vh;
     width: 100%;
@@ -194,7 +193,6 @@ i{
     right: 10px;
     height: 50px;
 }
-
 .arrow {
     height: 50px;
     border-radius: 50%;
@@ -302,39 +300,24 @@ i{
     padding: 50px;
 }
 .test-head h1{
- 
     font-size: var(--font-tiny-ad);
     padding: 0;
 }
+.reviews {
+    background: linear-gradient(to top, #33220a 0%, #271700 10%, #070212 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    height: 200vh;
+}
 .testimonials {
     display: flex;
-    background-color: var(--1st);
+    
     width: 100%;
-    height: 100%;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
     position: relative;
-    justify-content: center;
-}
-.testimonials::before,
-.testimonials::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 60px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.testimonials::before {
-    left: 0;
-    background: linear-gradient(to right, var(--1st), transparent);
-}
-
-.testimonials::after {
-    right: 0;
-    background: linear-gradient(to left, var(--1st), transparent);
+    padding: 0 50px;
 }
 .testimonial {
     box-shadow: 0 0 5px #ff9900;
@@ -342,8 +325,8 @@ i{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    height: 25vh;
-    width: 40vw;
+    height: 30vh;
+    width: 30vw;
     padding: var(--font-small);
 }
 .face {
@@ -408,7 +391,7 @@ i{
         padding: 2vw;
     }
     .head{
-        font-size: var(--font-medium);
+        font-size: var(--font-large-ad);
         padding: 40px 0;
     }
     .test-head h1{
@@ -419,12 +402,14 @@ i{
         font-size: var(--font-tiny);
     }
     .works{
-        
+        gap: 20px;
+    }
+    .testimonials{
         gap: 20px;
     }
     .testimonial{
         height: 30vh;
-        width: 60vw;
+        width: 40vw;
         padding: 20px;
     }
     
@@ -435,6 +420,12 @@ i{
     }
     .o-link{
         font-size: var(--font-small);
+    }
+    .copy{
+        font-size: var(--font-mini);
+    }
+    .monial{
+        font-size: var(--font-mini);
     }
 }
 @media (max-width:600px) {
