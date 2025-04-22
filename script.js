@@ -67,12 +67,38 @@ off.addEventListener('click',()=>{
   }
 })
   
+     //text reveal
+const splitTypes = document.querySelectorAll(".reveal");
+splitTypes.forEach((char,i)=>{
 
+  const text = new SplitType(char,{types:"chars"});
+  console.log(text);
+  gsap.from(text.chars,{
+    scrollTrigger:{
+      trigger:char,
+      start:"top 80%",
+      end:"top 20%",
+      scrub:true,
+    },
+    stagger:0.1,
+    opacity:0.3,
+  })
+})
 
+gsap.to(".testimonials",{
+  scrollTrigger:{
+    trigger:".testimonials",
+    start:"top 30%",
+    end:"top -20%",
+    scrub:true,
+    pin:true,
+    ease:Expo.easeInOut,
 
+  },
+  x:"-150%",
+})
 
-
-//lenisrr
+     //lenisrr
 const lenis = new Lenis()
 function raf(time) {
   lenis.raf(time)
@@ -80,7 +106,7 @@ function raf(time) {
 }
 requestAnimationFrame(raf)
 
-const works = document.querySelectorAll('.work')
+const works = document.querySelectorAll('.work-row')
 
 lenis.on('scroll', () => {
   const winHeight = window.innerHeight
@@ -98,3 +124,4 @@ lenis.on('scroll', () => {
     }
   })
 })
+
