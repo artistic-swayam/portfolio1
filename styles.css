@@ -427,6 +427,9 @@ i{
     .monial{
         font-size: var(--font-mini);
     }
+    .profile {
+        gap: 5px;
+    }
 }
 @media (max-width:600px) {
     .text{
