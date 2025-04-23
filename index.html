@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loader</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="loader">
+        <div class="loader-container">
+                       <h1 class="loader-text">
+                        <i>"I’m</i> <b>Swayam</b><i>— a creative </i><b>freelance developer</b><i> providing </i><b>websites</b><i> for </i>
+                        <b>brands</b><i> that refuse to settle for average. I build </i><b>bold</b>, 
+                        <b>high-performance</b><i> experiences that leaves a </i><b>mark</b><i>
+                        and makes</i> <b>noise</b><i>."</i></h1>
+                        <div class="bar-container">
+                            <div class="bar" id="bar"></div>
+                          </div>
+        </div>
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    gsap.to("#bar", {
+      width: "100%",
+      duration: 15,
+      ease: "ease.inOut",
+      onComplete: function() {
+        console.log("Loading complete!");
+        window.location.href = "main.html"; // change to your actual page
+      }
+    });
+  </script>
+</body>
+</html>
