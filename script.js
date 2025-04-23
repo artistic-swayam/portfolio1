@@ -6,7 +6,15 @@
 //   app.load('https://prod.spline.design/e1ahrrOCFKVpYV0k/scene.splinecode');
 // });
 
-
+gsap.to("#bar", {
+  width: "100%",
+  duration: 2.5,
+  ease: "power2.out",
+  onComplete: () => {
+    // You can redirect or hide loader here
+    console.log("Loading complete!");
+  }
+});
 const tl = gsap.timeline();
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,9 +76,24 @@ off.addEventListener('click',()=>{
 })
   
      //text reveal
+     window.addEventListener('load', function () {
+      gsap.from(".home",{
+        // scrollTrigger:{
+        //   trigger:char,
+        //   start:"top 80%",
+        //   end:"top 20%",
+        //   scrub:true,
+        // },
+        opacity: 0,
+        duration: 1.5,
+        ease: "power2.out"
+      })
+    });
+     
 const splitTypes = document.querySelectorAll(".reveal");
 splitTypes.forEach((char,i)=>{
 
+  
   const text = new SplitType(char,{types:"chars"});
   console.log(text);
   gsap.from(text.chars,{
@@ -90,7 +113,7 @@ gsap.to(".testimonials",{
     trigger:".testimonials",
     start:"top 30%",
     end:"top -20%",
-    scrub:true,
+    scrub:3,
     pin:true,
     ease:Expo.easeInOut,
 
@@ -104,7 +127,7 @@ const mm = gsap.matchMedia();
               trigger:".testimonials",
               start:"top 30%",
               end:"top -20%",
-              scrub:3,
+              scrub:true,
               ease:Expo.easeInOut,
           
             },
@@ -112,20 +135,6 @@ const mm = gsap.matchMedia();
           })
         })
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
      //lenisrr
