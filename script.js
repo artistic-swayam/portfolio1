@@ -90,7 +90,7 @@ gsap.to(".testimonials",{
     trigger:".testimonials",
     start:"top 30%",
     end:"top -20%",
-    scrub:3,
+    scrub:true,
     pin:true,
     ease:Expo.easeInOut,
 
