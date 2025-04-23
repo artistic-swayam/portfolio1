@@ -90,13 +90,43 @@ gsap.to(".testimonials",{
     trigger:".testimonials",
     start:"top 30%",
     end:"top -20%",
-    scrub:true,
+    scrub:3,
     pin:true,
     ease:Expo.easeInOut,
 
   },
   x:"-150%",
 })
+const mm = gsap.matchMedia();
+        mm.add("(max-width:800px)",()=>{
+          gsap.to(".testimonials",{
+            scrollTrigger:{
+              trigger:".testimonials",
+              start:"top 30%",
+              end:"top -20%",
+              scrub:3,
+              ease:Expo.easeInOut,
+          
+            },
+            x:"-200%",
+          })
+        })
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
      //lenisrr
 const lenis = new Lenis()
