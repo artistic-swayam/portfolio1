@@ -41,6 +41,10 @@
     --font-tiny-ad: 4.5vw;
     --font-tiny: 18px;
     --font-mini: 13px;
+    --font-tiny-mini: 10px;
+}
+.whole{
+    overflow: hidden;
 }
 .home{
     height: 100vh;
@@ -409,8 +413,8 @@ i{
     }
     .testimonial{
         height: 30vh;
-        width: 40vw;
-        padding: 20px;
+        width: 50vw;
+        padding: 10px;
     }
     
     .work-row{
@@ -429,6 +433,9 @@ i{
     }
     .profile {
         gap: 5px;
+    }
+    .profession{
+        font-size: var(--font-tiny-mini);
     }
 }
 @media (max-width:600px) {
