@@ -226,6 +226,9 @@ i{
     width: 100%;
     border-radius: 10px;
 }
+.work{
+    box-shadow: 0 0 50px #000;
+}
 .arrow-div {
     position: absolute;
     display: flex;
@@ -405,19 +408,30 @@ i{
 .monial{
     font-size: var(--font-tiny);
     color: var(--2nd);
+    padding: 10px;
 }
 .expertise{
-    height: 150vh;
-    background-color: var(--1st);
+    height: 200vh;
+    background: var(--1st);
  
+}
+.m-head{
+
 }
 .member {
     width: 100%;
-    height: 40vh;
+    flex-direction: row;
+    gap: 5vw;
+    align-items: flex-start;
+    box-shadow: 0 0 50px #000;
+    top: -50%;
+    height: 50vh;
     background: var(--2nd);
 }
-.member-row{
+.member-row {
     padding: 50px;
+    gap: 50px;
+    flex-direction: column;
 }
 .m-profession {
     font-size: var(--links-pad);
@@ -426,24 +440,41 @@ i{
     font-size: var(--font-small);
     color: var(--1st);
 }
-.skills{
+.skills {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .skill {
-    padding: 20px;
-    background: var(--1st);
-    color: var(--2nd);
-    font-family: var(--2nd-font);
-    border-radius: 20px;
-}
-.m-text{
+    padding: 10px;
+    background: var(--2nd);
     color: var(--1st);
+    font-family: var(--2nd-font);
+    border-radius: 10px;
+    transition: .2s linear;
+}
+.skill:hover{
+    color: #7a7a7a;
+}
+.m-text {
+    color: var(--2nd);
+    background-color: var(--1st);
+    display: flex
+;
+    flex-direction: column;
+    gap: 40px;
+    border-radius: 10px;
+    font-size: 1.2vw;
+    margin: 10px auto;
 }
 .m-face {
     width: 80px;
     height: 80px;
     border-radius: 100%;
+}
+.contacts{
+    height: 100vh;
+    background-color: var(--1st);
 }
 @media (max-width:900px) {
     .bar-container {
@@ -528,8 +559,20 @@ i{
     .profession{
         font-size: var(--font-tiny-mini);
     }
-    .member{
+    .m-profession{
+        font-size: var(--link-pad);
+    }
+    
+}
+@media (max-width: 1100px){
+    .member {
         width: 100%;
+        flex-direction: column;
+        gap: 30px;
+        /* align-items: flex-start; */
+        top: -50%;
+        height: 70vh;
+        background: var(--2nd);
     }
 }
 @media (max-width:600px) {
