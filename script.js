@@ -120,6 +120,22 @@ gsap.to(".testimonials",{
   },
   x:"-150%",
 })
+
+gsap.to(".m",{
+  scrollTrigger:{
+    trigger:".member-row",
+    start:"top 5%",
+    end:"top -15%",
+    scrub:true,
+  },
+  y: "-70%", // move it up slowly
+  ease: "none"
+})
+
+
+
+
+
 const mm = gsap.matchMedia();
         mm.add("(max-width:800px)",()=>{
           gsap.to(".testimonials",{
