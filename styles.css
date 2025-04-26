@@ -44,6 +44,7 @@
     --font-tiny-mini: 10px;
 }
 .whole{
+
     overflow: hidden;
     background-color: var(--1st);
 }
@@ -57,7 +58,7 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient(to top, #33220a 0%, #271700 10%, #070212 100%);
-    z-index: 1000;
+    z-index: 10000;
 
 }
 .loader-container {
@@ -571,7 +572,7 @@ i{
         gap: 30px;
         /* align-items: flex-start; */
         top: -50%;
-        height: 70vh;
+        height: 75vh;
         background: var(--2nd);
     }
 }
