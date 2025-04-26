@@ -5,10 +5,26 @@
 //   const app = new Application(canvas);
 //   app.load('https://prod.spline.design/e1ahrrOCFKVpYV0k/scene.splinecode');
 // });
+const whole = document.querySelector('.whole');
+const loader = document.querySelector('.loader');
+gsap.to("#bar", {
+  width: "100%",
+  duration: 5,
+  ease: "ease.inOut",
+  onComplete: function() {
+    console.log("Loading complete!");
+    loader.style.display = "none";
+    gsap.from(".home",{
+      opacity: 0,
+      duration: 1.5,
+      ease: "power2.out"
+    }) 
+  }
+});
 
 gsap.to("#bar", {
   width: "100%",
-  duration: 2.5,
+  duration: 5,
   ease: "power2.out",
   onComplete: () => {
     // You can redirect or hide loader here
@@ -76,19 +92,7 @@ off.addEventListener('click',()=>{
 })
   
      //text reveal
-     window.addEventListener('load', function () {
-      gsap.from(".home",{
-        // scrollTrigger:{
-        //   trigger:char,
-        //   start:"top 80%",
-        //   end:"top 20%",
-        //   scrub:true,
-        // },
-        opacity: 0,
-        duration: 1.5,
-        ease: "power2.out"
-      })
-    });
+    
      
 const splitTypes = document.querySelectorAll(".reveal");
 splitTypes.forEach((char,i)=>{
