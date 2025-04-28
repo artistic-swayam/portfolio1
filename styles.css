@@ -171,7 +171,7 @@ i{
 }
 .menu-i,.close-i {
     position: fixed;
-    top: 2vh;
+    top: 4vh;
     background-color: var(--1st);
     box-shadow: 0 0 5px #ff9900;
     right: 2vw;
@@ -190,10 +190,10 @@ i{
 .works{    
     height: 400vh;
 }
-.works{
+.works,.abouts{
     background-color: var(--1st);
     display: flex;
-    height: 250vh;
+    height: auto;
 
     width: 100vw;
     align-items: center;
@@ -204,8 +204,10 @@ i{
 .work-row,.testimonial-row{
     display: flex;
     justify-content: space-between;
+
     gap: 20px;/* 9u w8r*/
     width: 100%;
+
 }
 .one{
     background-image: url("m1.png");
@@ -269,6 +271,9 @@ i{
     padding: var(--links-pad);
     color: #7a7a7a;
 }
+.black{
+    color: var(--1st);
+}
 .head-container{
     width: 100%;
     text-align: left;
@@ -279,7 +284,21 @@ i{
     font-size: var(--font-small-ad);
     padding: 80px 0;
 }
+hr{
+    width: 100%;
+}
+.services {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
 
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    color: var(--2nd);
+    font-size: var(--font-tiny-ad);
+}
 
 .overlay {
     position: fixed;
@@ -360,7 +379,7 @@ i{
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
-    height: 200vh;
+    height: 150vh;
 }
 .testimonials {
     display: flex;
@@ -376,7 +395,7 @@ i{
     background-color: var(--1st);
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     height: 30vh;
     width: 30vw;
     padding: var(--font-small);
@@ -412,7 +431,7 @@ i{
     padding: 10px;
 }
 .expertise{
-    height: 200vh;
+    height: auto;
     background: var(--1st);
  
 }
@@ -424,7 +443,7 @@ i{
     flex-direction: row;
     gap: 5vw;
     align-items: flex-start;
-    box-shadow: 0 0 50px #000;
+    box-shadow: 0 0 100px #000;
     top: -50%;
     height: 50vh;
     background: var(--2nd);
@@ -477,6 +496,107 @@ i{
     height: 100vh;
     background-color: var(--1st);
 }
+
+.about {
+    height: 20vh;
+    width: 100%;
+
+}
+.a-name{
+    font-size: 30px;
+}
+.about .monial{
+    height: 100%;
+    width: 100%;
+}
+.a-skill{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    
+}
+.a-profile{
+    width: 95%;
+}
+.m{
+    width: 90%;
+}
+.monial a{
+    text-decoration: none;
+}
+.abouts .work{
+    background-color: var(--2nd);
+}
+.tools,.hobbies,.dev {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: var(--font-small);
+    height: auto;
+}
+.tools .skill{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.icon{
+    height: 40px;
+    width: 40px;
+
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.hob{
+    flex-direction: column;
+}
+.txt{
+    width: 90%;
+}
+.hobbies{
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 20px 20px 0 20px;
+}
+.img{
+    /* background-image: url("wi.jpg");
+    background-size: cover; */
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.dev{
+    height: auto;
+}
+.svg{
+    height: 30px;
+}
+.back{
+    background: linear-gradient(to top, #33220a 0%, #271700 10%, #070212 100%);
+}
+
+
+
+
+
+
+
+
+
+.contacts {
+    background: radial-gradient(circle at center center, #ff6a00 0%, #ff9900 30%, #0a0022 100%);
+    animation: pulseGlow 4s ease-in-out infinite;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
 @media (max-width:900px) {
     .bar-container {
         width: 100px;
@@ -531,6 +651,9 @@ i{
     .works{
         gap: 20px;
     }
+    .work .type{
+        font-size: var(--font-mini);
+    }
     .testimonials{
         gap: 20px;
     }
@@ -563,7 +686,13 @@ i{
     .m-profession{
         font-size: var(--link-pad);
     }
-    
+    .a-name{
+        font-size: var(--font-tiny-ad);
+    }
+    .services {
+        font-size: 5vw;
+        gap: 3vw;
+    }
 }
 @media (max-width: 1100px){
     .member {
@@ -575,6 +704,31 @@ i{
         height: 75vh;
         background: var(--2nd);
     }
+    .m{
+        width: 90%;
+    }
+    .about{
+        height: 20vh;
+    }
+    .about .monial{
+        height: 80%;
+    }
+    .a-profile{
+        width: 95%;
+    }
+    .info{
+        display: flex;
+        
+        flex-direction: column;
+    }
+    .tools,.hobbies,.dev {
+        
+        height: 65vh;
+    }
+    .txt{
+        font-size: var(--font-mini);
+    }
+    
 }
 @media (max-width:600px) {
     .text{
