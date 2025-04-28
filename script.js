@@ -7,9 +7,10 @@
 // });
 const whole = document.querySelector('.whole');
 const loader = document.querySelector('.loader');
+const services = document.querySelector('.services');
 gsap.to("#bar", {
   width: "100%",
-  duration: 5,
+  duration: 1,//8
   ease: "ease.inOut",
   onComplete: function() {
     console.log("Loading complete!");
@@ -24,7 +25,7 @@ gsap.to("#bar", {
 
 gsap.to("#bar", {
   width: "100%",
-  duration: 5,
+  duration: 1,//5
   ease: "power2.out",
   onComplete: () => {
     // You can redirect or hide loader here
@@ -136,8 +137,52 @@ gsap.to(".m",{
   ease: "none"
 })
 
+const splitY = document.querySelectorAll(".rev");
+splitY.forEach((char,i)=>{
 
+  
+  const text = new SplitType(char,{types:"chars"});
+  console.log(text);
+  gsap.from(text.chars,{
+    scrollTrigger:{
+      trigger:char,
+      start:"top 80%",
+      end:"top 40%",
+      scrub:true,
 
+    },
+    stagger:0.1,
+    opacity:0,
+    y:"50%",
+    onComplete: () => {
+      gsap.to(".left",{
+        scrollTrigger:{
+          trigger:".services",
+          start:"top 5%",
+          end:"top -40%",
+          scrub:true,
+
+        },
+        x: "-100%",
+        opacity:0.2,
+        ease:Expo.easeInOut, // move it up slowly
+      }),
+      gsap.to(".right",{
+        scrollTrigger:{
+          trigger:".services",
+          start:"top 5%",
+          end:"top -40%",
+          scrub:true,
+        },
+        x: "120%", 
+        opacity:0.2,
+        ease:Expo.easeInOut,
+        
+      })
+    }
+  })
+  
+})
 
 
 const mm = gsap.matchMedia();
@@ -158,7 +203,9 @@ const mm = gsap.matchMedia();
 
 
      //lenisrr
-const lenis = new Lenis()
+     const lenis = new Lenis({
+
+    })
 function raf(time) {
   lenis.raf(time)
   requestAnimationFrame(raf)
