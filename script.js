@@ -35,15 +35,24 @@ gsap.to("#bar", {
 const tl = gsap.timeline();
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 //gsap animation
 let menuAnimation = gsap.to(".menu-i", {
     opacity: 1,
     duration: 0.5,
     paused: true,  // Initially paused
   });
-  
+let headAnimation1 = gsap.from(".contact-head", {
+    opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out",
+    scrollTrigger:{
+      trigger:".contact-head",
+      start:"top 80%",
+      end:"top 20%",
+    }     
+});
+
   ScrollTrigger.create({
     trigger: ".menu-i",
     start: "top -50%",  // When the top of the element hits the viewport center
@@ -72,6 +81,8 @@ let menuAnimation = gsap.to(".menu-i", {
 const menubtn = document.querySelector('.menu-i');
 const menu = document.querySelector('.overlay');
 const off = document.querySelector('.close-i');
+const links = document.querySelectorAll('.o-link');
+
 menubtn.addEventListener('click', () => {
   menu.classList.toggle('active');
   off.classList.toggle('active');
@@ -91,7 +102,11 @@ off.addEventListener('click',()=>{
     gsap.to('.calendly-badge-content', { duration: 0, opacity: 1 });
   }
 })
-  
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+});
      //text reveal
     
      
@@ -152,31 +167,32 @@ splitY.forEach((char,i)=>{
 
     },
     stagger:0.1,
-    opacity:0,
-    y:"50%",
+    opacity:0.4,
+    
+    //y:"50%",
     onComplete: () => {
       gsap.to(".left",{
         scrollTrigger:{
           trigger:".services",
-          start:"top 5%",
-          end:"top -40%",
+          start:"top -5%",
+          end:"top -50%",
           scrub:true,
 
         },
         x: "-100%",
         opacity:0.2,
-        ease:Expo.easeInOut, // move it up slowly
+         // move it up slowly
       }),
       gsap.to(".right",{
         scrollTrigger:{
           trigger:".services",
-          start:"top 5%",
-          end:"top -40%",
+          start:"top -5%",
+          end:"top -50%",
           scrub:true,
         },
         x: "120%", 
         opacity:0.2,
-        ease:Expo.easeInOut,
+        
         
       })
     }
@@ -199,9 +215,7 @@ const mm = gsap.matchMedia();
             x:"-200%",
           })
         })
-            
-
-
+          
      //lenisrr
      const lenis = new Lenis({
 
@@ -216,7 +230,6 @@ const works = document.querySelectorAll('.work-row')
 
 lenis.on('scroll', () => {
   const winHeight = window.innerHeight
-
   works.forEach(work => {
     const rect = work.getBoundingClientRect()
     const middle = rect.top + rect.height / 2
