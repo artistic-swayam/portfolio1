@@ -10,7 +10,7 @@ const loader = document.querySelector('.loader');
 const services = document.querySelector('.services');
 gsap.to("#bar", {
   width: "100%",
-  duration: 1,//8
+  duration: 7,//8
   ease: "ease.inOut",
   onComplete: function() {
     console.log("Loading complete!");
@@ -25,7 +25,7 @@ gsap.to("#bar", {
 
 gsap.to("#bar", {
   width: "100%",
-  duration: 1,//5
+  duration: 5,//5
   ease: "power2.out",
   onComplete: () => {
     // You can redirect or hide loader here
