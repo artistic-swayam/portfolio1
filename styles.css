@@ -97,6 +97,23 @@
     background-size: 150% 150%;
     animation: pulseGlow 4s ease-in-out infinite;
 }
+.one{
+    background-image: url("m1.png");
+    background-size: cover;
+
+}
+.two{
+    background-image: url("m3.png");
+    background-size: cover;
+}
+.three{
+    background-image: url("m2.PNG");
+    background-size: cover;
+}
+.four{
+    background-image: url("m4.PNG");
+    background-size: cover;
+}
 @keyframes pulseGlow {
     0% {
       background-size: 150% 150%;
@@ -208,23 +225,7 @@ i{
     width: 100%;
 
 }
-.one{
-    background-image: url("m1.png");
-    background-size: cover;
 
-}
-.two{
-    background-image: url("m3.png");
-    background-size: cover;
-}
-.three{
-    background-image: url("m2.PNG");
-    background-size: cover;
-}
-.four{
-    background-image: url("m4.PNG");
-    background-size: cover;
-}
 
 .work,.testimonial{
     background-repeat: no-repeat;
@@ -594,9 +595,8 @@ hr{
     position: relative;
     overflow: hidden;
   }
-  .contact-txt{
-    z-index: 1000;
-  }
+
+  
   .contact-head{
     text-align: center;
     display: flex;
@@ -620,10 +620,13 @@ hr{
     border-radius: 10px;
     box-shadow: 0 0 30px #ff6a00aa;
     cursor: pointer;
-    display: table-cell;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--2nd-font);
     font-size: 14px;
     font-weight: 700;
+    text-decoration: none;
     height: 45px;
     padding: 0 30px;
     color: var(--2nd);
@@ -638,9 +641,7 @@ hr{
 }
 
 @media (max-width:900px) {
-    .one,.two, .three{
-        background-position: -80px center;
-    }
+    
     
     .bar-container {
         width: 100px;
@@ -774,6 +775,9 @@ hr{
     }
 }
 @media (max-width:600px) {
+    .one,.two, .three{
+        background-position: -80px center;
+    }
     .text{
         height: 37%;
     }
