@@ -74,13 +74,13 @@ function draw() {
 class Word {
   constructor(x, y, word) {
     this.word = word;
-    this.textSize = windowWidth < 600 ? 20 : 32;
-  
+    this.textSize = windowWidth < 600 ? 14 : 20; // Smaller text size
+
     textFont('SF Pro Display');
     textSize(this.textSize);
-    this.width = textWidth(this.word) + 30; // Less padding
-    this.height = 50;
-  
+    this.width = textWidth(this.word) + 20; // Reduced horizontal padding
+    this.height = 36; // Reduced height
+
     this.body = Bodies.rectangle(x, y, this.width, this.height);
     World.add(world, this.body);
   }
@@ -96,7 +96,7 @@ class Word {
     fill("#13131b");
     stroke("#c17605");
     strokeWeight(1);
-    rect(0, 0, this.width, this.height, 60);
+    rect(0, 0, this.width, this.height, 40); // slightly smaller corner radius
 
     noStroke();
     textFont('SF Pro Display');
@@ -108,6 +108,7 @@ class Word {
   }
 }
 
+
 // Force apply on hover
 function mouseMoved() {
   for (let word of words) {
@@ -115,7 +116,7 @@ function mouseMoved() {
       Body.applyForce(
         word.body,
         { x: word.body.position.x, y: word.body.position.y },
-        { x: random(-1, 1), y: random(-1, 1) }
+        { x: random(-0.3, 0.3), y: random(-0.3, 0.3) }
       );
     }
   }
@@ -138,7 +139,4 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(document.querySelector(".contacts"));
 
-// Optional: rebuild on resize
-function windowResized() {
-  location.reload(); // Or reinitialize manually
-}
+
