@@ -1,16 +1,13 @@
-// import { Application } from 'https://unpkg.com/@splinetool/runtime@0.9.505/build/runtime.js';
+if (navigator.userAgent.includes("Instagram")) {
+  alert("This browser might not fully support animations. For the best experience, open in Chrome.");
+}
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const canvas = document.getElementById('canvas3d');
-//   const app = new Application(canvas);
-//   app.load('https://prod.spline.design/e1ahrrOCFKVpYV0k/scene.splinecode');
-// });
 const whole = document.querySelector('.whole');
 const loader = document.querySelector('.loader');
 const services = document.querySelector('.services');
 gsap.to("#bar", {
   width: "100%",
-  duration: 7,//8
+  duration: 10,//8
   ease: "ease.inOut",
   onComplete: function() {
     console.log("Loading complete!");
@@ -23,15 +20,7 @@ gsap.to("#bar", {
   }
 });
 
-gsap.to("#bar", {
-  width: "100%",
-  duration: 5,//5
-  ease: "power2.out",
-  onComplete: () => {
-    // You can redirect or hide loader here
-    console.log("Loading complete!");
-  }
-});
+
 const tl = gsap.timeline();
 gsap.registerPlugin(ScrollTrigger);
 
