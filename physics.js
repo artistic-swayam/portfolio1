@@ -94,7 +94,7 @@ class Word {
     rectMode(CENTER);
 
     fill("#13131b");
-    stroke("#c17605");
+    
     strokeWeight(1);
     rect(0, 0, this.width, this.height, 40); // slightly smaller corner radius
 
