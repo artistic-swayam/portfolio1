@@ -1,28 +1,32 @@
-*{
+* {
     padding: 0;
-    margin: 0   ;
-    box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box
 }
+
 ::-webkit-scrollbar {
-    display: none;
+    display: none
 }
+
 @font-face {
     font-family: 'SF Pro Display';
-    src: url('SFPRODISPLAYBOLD.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+    src: url(SFPRODISPLAYBOLD.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal
 }
+
 @font-face {
     font-family: 'Apple Garamond';
-    src: url('AppleGaramond.ttf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+    src: url(AppleGaramond.ttf) format('opentype');
+    font-weight: 400;
+    font-style: normal
 }
-:root{
+
+:root {
     --1st: #131313;
     --2nd: rgb(221, 221, 221);
     --3rd: #111196;
-    --4th: linear-gradient(to top,#000 ,#c18d2c );
+    --4th: linear-gradient(to top, #000, #c18d2c);
     --5th: #c17605;
     --1st-font: 'Apple Garamond';
     --2nd-font: 'SF Pro Display';
@@ -31,7 +35,7 @@
     --link-pad: 10px 50px;
     --link-pad-small: 5px 10px;
     --padding-large: 100px 50px;
-    --padding-small: 50px 25px;/**/
+    --padding-small: 50px 25px;
     --font-large: 80px;
     --font-large-ad: 12.5vw;
     --font-medium: 70px;
@@ -40,14 +44,15 @@
     --font-tiny-ad: 4vw;
     --font-tiny: 18px;
     --font-mini: 13px;
-    --font-tiny-mini: 10px;
+    --font-tiny-mini: 10px
 }
-.whole{
 
+.whole {
     overflow: hidden;
-    background-color: var(--1st);
+    background-color: var(--1st)
 }
-.loader{
+
+.loader {
     position: fixed;
     top: 0;
     left: 0;
@@ -57,35 +62,38 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient(to top, #33220a 0%, #271700 10%, #070212 100%);
-    z-index: 10000;
-
+    z-index: 10000
 }
+
 .loader-container {
     width: 70vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 50px
 }
-.loader-text i{
-    color: #7b4800;
+
+.loader-text i {
+    color: #7b4800
 }
+
 .bar-container {
     width: 300px;
     height: 20px;
     background: #333;
     border-radius: 2px;
     overflow: hidden;
-    box-shadow: 0 0 5px #ff9900;
-  }
+    box-shadow: 0 0 5px #f90
+}
 
-  .bar {
+.bar {
     height: 100%;
     width: 0%;
     background: #d7820b;
-    box-shadow: 0 0 5px #ff9900;
-  }
-.home{
+    box-shadow: 0 0 5px #f90
+}
+
+.home {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -95,149 +103,169 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 150% 150%;
-    animation: pulseGlow 4s ease-in-out infinite;
+    animation: pulseGlow 4s ease-in-out infinite
 }
-.one{
-    background-image: url("m1.png");
-    background-size: cover;
 
+.one {
+    background-image: url(m1.png);
+    background-size: cover
 }
-.two{
-    background-image: url("m3.png");
-    background-size: cover;
+
+.two {
+    background-image: url(m3.png);
+    background-size: cover
 }
-.three{
-    background-image: url("m2.PNG");
-    background-size: cover;
+
+.three {
+    background-image: url(m2.PNG);
+    background-size: cover
 }
-.four{
-    background-image: url("m4.PNG");
-    background-size: cover;
+
+.four {
+    background-image: url(m4.PNG);
+    background-size: cover
 }
+
 @keyframes pulseGlow {
     0% {
-      background-size: 150% 150%;
+        background-size: 150% 150%
     }
+
     50% {
-      background-size: 170% 170%;
+        background-size: 170% 170%
     }
+
     100% {
-      background-size: 150% 150%;
+        background-size: 150% 150%
     }
-  }
+}
+
 .upper {
     display: flex;
     align-items: center;
     height: 50vh;
     width: 100vw;
-    padding: 1vw;
+    padding: 1vw
 }
-.lower{
+
+.lower {
     height: 50vh;
     width: 100vw;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end
 }
-.lower-text{
+
+.lower-text {
     text-align: center;
     width: 100%;
     color: var(--2nd);
     font-family: var(--2nd-font);
     font-size: var(--font-tiny);
-    padding: 2vw;
+    padding: 2vw
 }
-.text{
-   height: 100%;
-   color: var(--2nd);
-   text-align: right;
+
+.text {
+    height: 100%;
+    color: var(--2nd);
+    text-align: right
 }
-.hero-text{
+
+.hero-text {
     font-size: var(--font-large-ad);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between
 }
+
 p {
     font-size: var(--font-tiny);
-    display: inline-block;
-    /* text-align: right; */
+    display: inline-block
 }
-b{
-    font-family: var(--2nd-font);
+
+b {
+    font-family: var(--2nd-font)
 }
-i{
-    font-family: 'Apple Garamond';
+
+i {
+    font-family: 'Apple Garamond'
 }
+
 .btn-area {
     height: 45%;
     width: 100%;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: flex-end
 }
-.calendly-badge-content{
+
+.calendly-badge-content {
     font-size: var(--font-tiny);
     color: var(--2nd);
     background-color: var(--1st);
-    
     border-radius: 10px;
     font-family: 'SF Pro Display';
-    padding: 20px 30px;
+    padding: 20px 30px
 }
-.menu-i,.close-i {
+
+.menu-i,
+.close-i {
     position: fixed;
     top: 4vh;
     background-color: var(--1st);
-    box-shadow: 0 0 5px #ff9900;
+    box-shadow: 0 0 5px #f90;
     right: 2vw;
     opacity: 0;
     border-radius: 10px;
     padding: 1vw;
     color: var(--2nd);
-    font-size: 30px;
+    font-size: 30px
 }
-.menu-i{
-    z-index: 500;
+
+.menu-i {
+    z-index: 500
 }
-.close-i{
-    opacity: 1;
+
+.close-i {
+    opacity: 1
 }
-.works{    
-    height: 400vh;
+
+.works {
+    height: 400vh
 }
-.works,.abouts{
+
+.works,
+.abouts {
     background-color: var(--1st);
     display: flex;
     height: auto;
-
     width: 100vw;
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    padding: var(--padding-large);
+    padding: var(--padding-large)
 }
-.work-row,.testimonial-row{
+
+.work-row,
+.testimonial-row {
     display: flex;
     justify-content: space-between;
-
-    gap: 20px;/* 9u w8r*/
-    width: 100%;
-
+    gap: 20px;
+    width: 100%
 }
 
-
-.work,.testimonial{
+.work,
+.testimonial {
     background-repeat: no-repeat;
-
     will-change: background-position;
     height: 50vh;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 10px
 }
-.work{
-    box-shadow: 0 0 50px #000;
+
+.work {
+    box-shadow: 0 0 50px #000
 }
+
 .arrow-div {
     position: absolute;
     display: flex;
@@ -246,55 +274,60 @@ i{
     align-items: center;
     bottom: 10px;
     right: 10px;
-    height: 50px;
-
+    height: 50px
 }
+
 .arrow {
     height: 50px;
     border-radius: 50%;
     text-align: right;
     padding: 10px;
     transform: rotate(125deg);
-    transition: 0.2s linear;
-    
+    transition: 0.2s linear
 }
-.arrow:hover{
-    transform: rotate(180deg);
+
+.arrow:hover {
+    transform: rotate(180deg)
 }
-.brand{
+
+.brand {
     text-align: left;
     background-color: var(--2nd);
     border-radius: 10px;
     font-size: var(--font-small);
     padding: var(--links-pad);
-    font-family: var(--2nd-font);
+    font-family: var(--2nd-font)
 }
+
 .type {
     display: block;
     text-align: start;
     font-size: var(--font-tiny);
     font-family: var(--2nd-font);
     padding: var(--links-pad);
-    color: #7a7a7a;
+    color: #7a7a7a
 }
-.black{
-    color: var(--1st);
+
+.black {
+    color: var(--1st)
 }
-.head-container{
+
+.head-container {
     width: 100%;
-    text-align: left;
-    
+    text-align: left
 }
-.head{
+
+.head {
     color: var(--2nd);
     font-family: var(--1st-font);
     font-size: var(--font-small-ad);
-    padding: 80px 0;
+    padding: 80px 0
+}
 
+hr {
+    width: 100%
 }
-hr{
-    width: 100%;
-}
+
 .services {
     display: flex;
     flex-direction: column;
@@ -304,7 +337,7 @@ hr{
     justify-content: center;
     gap: 1vw;
     color: var(--2nd);
-    font-size: var(--font-tiny-ad);
+    font-size: var(--font-tiny-ad)
 }
 
 .overlay {
@@ -316,125 +349,141 @@ hr{
     width: 100vw;
     display: none;
     align-items: center;
-    /* justify-content: center; background: radial-gradient(circle at center center, #ff8f40 0%, #271700 40%, #0a0022 100%);*/
     background: radial-gradient(circle at center center, #ff8f40 0%, #271700 30%, #0a0022 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 150% 150%;
-    animation: pulseGlow 4s  infinite;
+    animation: pulseGlow 4s infinite
 }
-.active{
+
+.active {
     z-index: 2000;
-    display: flex;
+    display: flex
 }
+
 .overlay-content {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     padding: 0 10vw;
-    height: 100%;
+    height: 100%
 }
+
 .o-link {
     font-size: var(--font-large);
     color: var(--2nd);
     opacity: 0;
-    text-decoration: none;
+    text-decoration: none
 }
-.o-link:hover{
+
+.o-link:hover {
     color: #7a7a7a;
-    transition: 0.2s linear;
+    transition: 0.2s linear
 }
+
 .copy {
     color: #7a7a7a;
     position: absolute;
-    bottom: 5vh;
-   
+    bottom: 5vh
 }
-.none{
-    display: none;
+
+.none {
+    display: none
 }
+
 .reviews {
     background-color: var(--1st);
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    height: 100vh;
+    height: 100vh
 }
-.test-head{
-    padding: 50px;
+
+.test-head {
+    padding: 50px
 }
-.test-head h1,.loader-text{
+
+.test-head h1,
+.loader-text {
     font-size: var(--font-tiny-ad);
-    padding: 0;
+    padding: 0
 }
-.loader-text{
+
+.loader-text {
     color: var(--2nd);
-    text-align: center;
+    text-align: center
 }
-.reviews, .expertise{
+
+.reviews,
+.expertise {
     background: linear-gradient(to top, #33220a 0%, #271700 10%, #070212 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
-    height: 150vh;
+    height: 150vh
 }
+
 .testimonials {
     display: flex;
-    
     width: 100%;
     align-items: center;
     gap: 50px;
     position: relative;
-    padding: 0 50px;
+    padding: 0 50px
 }
+
 .testimonial {
-    box-shadow: 0 0 5px #ff9900;
+    box-shadow: 0 0 5px #f90;
     background-color: var(--1st);
     display: flex;
     flex-direction: column;
     gap: 20px;
     height: auto;
     width: 30vw;
-    padding: var(--font-small);
+    padding: var(--font-small)
 }
+
 .face {
     width: 40px;
     height: 40px;
-    border-radius: 100%;
+    border-radius: 100%
 }
+
 .profile {
     display: flex;
     gap: 20px;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
-.profile-text{
+
+.profile-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    justify-content: center
 }
-.name{
+
+.name {
     font-size: var(--font-tiny);
-    color: var(--2nd);
-
+    color: var(--2nd)
 }
-.profession{
+
+.profession {
     font-size: var(--font-mini);
-    color: #7a7a7a;
+    color: #7a7a7a
 }
-.monial{
+
+.monial {
     font-size: var(--font-tiny);
     color: var(--2nd);
-    padding: 10px;
+    padding: 10px
 }
-.expertise{
+
+.expertise {
     height: auto;
-    background: var(--1st);
- 
+    background: var(--1st)
 }
+
 .member {
     width: 100%;
     flex-direction: row;
@@ -443,140 +492,164 @@ hr{
     box-shadow: 0 0 100px #000;
     top: -50%;
     height: 50vh;
-    background: var(--2nd);
+    background: var(--2nd)
 }
 
 .member-row {
     padding: 50px;
     gap: 50px;
-    flex-direction: column;
+    flex-direction: column
 }
+
 .m-profession {
-    font-size: var(--links-pad);
+    font-size: var(--links-pad)
 }
+
 .m-name {
     font-size: var(--font-small);
-    color: var(--1st);
+    color: var(--1st)
 }
+
 .skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 10px
 }
+
 .skill {
     padding: 10px;
     background: var(--2nd);
     color: var(--1st);
     font-family: var(--2nd-font);
     border-radius: 10px;
-    transition: .2s linear;
+    transition: .2s linear
 }
-.skill:hover{
-    color: #7a7a7a;
+
+.skill:hover {
+    color: #7a7a7a
 }
+
 .m-text {
     color: var(--2nd);
     background-color: var(--1st);
-    display: flex
-;
+    display: flex;
     flex-direction: column;
     gap: 40px;
     border-radius: 10px;
     font-size: 1.2vw;
-    margin: 10px auto;
+    margin: 10px auto
 }
+
 .m-face {
     width: 80px;
     height: 80px;
-    border-radius: 100%;
+    border-radius: 100%
 }
-.contacts{
+
+.contacts {
     height: 100vh;
-    background-color: var(--1st);
+    background-color: var(--1st)
 }
 
 .about {
     height: 20vh;
-    width: 100%;
+    width: 100%
+}
 
+.a-name {
+    font-size: 30px
 }
-.a-name{
-    font-size: 30px;
+
+.about .monial {
+    height: 100%;
+    width: 100%
 }
-.about .monial{
+
+.a-skill {
     height: 100%;
     width: 100%;
+    text-align: center
 }
-.a-skill{
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    
+
+.a-profile {
+    width: 95%
 }
-.a-profile{
-    width: 95%;
+
+.m {
+    width: 90%
 }
-.m{
-    width: 90%;
+
+.monial a {
+    text-decoration: none
 }
-.monial a{
-    text-decoration: none;
+
+.abouts .work {
+    background-color: var(--2nd)
 }
-.abouts .work{
-    background-color: var(--2nd);
-}
-.tools,.hobbies,.dev {
+
+.tools,
+.hobbies,
+.dev {
     display: flex;
     flex-direction: column;
     gap: 40px;
     padding: var(--font-small);
-    height: auto;
+    height: auto
 }
-.tools .skill{
+
+.tools .skill {
     display: flex;
     gap: 5px;
-    align-items: center;
+    align-items: center
 }
-.icon{
-    height: 40px;
-    width: 40px;
 
+.icon {
+    height: 40px;
+    width: 40px
 }
-.info{
+
+.info {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 20px
 }
-.hob{
-    flex-direction: column;
+
+.hob {
+    flex-direction: column
 }
-.txt{
-    width: 90%;
+
+.txt {
+    width: 90%
 }
-.hobbies{
+
+.hobbies {
     justify-content: space-between;
     overflow: hidden;
-    padding: 20px 20px 0 20px;
+    padding: 20px 20px 0 20px
 }
-.img{
-    /* background-image: url("wi.jpg");
-    background-size: cover; */
+
+.img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 10px
 }
-.dev{
-    height: auto;
+
+.dev {
+    height: auto
 }
-.svg{
-    height: 30px;
+
+.svg {
+    height: 30px
 }
-.back{
-    background: linear-gradient(to top, #33220a 0%, #271700 10%, #070212 100%);
+
+.back {
+    background: linear-gradient(to top, #33220a 0%, #271700 10%, #070212 100%)
 }
-.o{
-    opacity: 0;
+
+.o {
+    opacity: 0
 }
+
 .contacts {
     background: radial-gradient(circle at center center, #ff6a00 0%, #ff9900 30%, #0a0022 100%);
     animation: pulseGlow 4s ease-in-out infinite;
@@ -585,32 +658,35 @@ hr{
     height: 100vh;
     justify-content: space-between;
     position: relative;
-    overflow: hidden;
-  }
+    overflow: hidden
+}
 
-  .contact-txt{
+.contact-txt {
     position: relative;
-    z-index: 1000;
-  }
-  .contact-head{
-    
+    z-index: 1000
+}
+
+.contact-head {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-  }
-  .c-type{
+    gap: 20px
+}
+
+.c-type {
     z-index: 100;
     text-align: center;
-  }
-  #bgCanvas {
+    font-size: var(--font-mini);
+}
+
+#bgCanvas {
     position: absolute;
     width: 100%;
-    height: 100%;
-  }
+    height: 100%
+}
 
-  .contact-bt {
+.contact-bt {
     z-index: 1000;
     border-radius: 10px;
     box-shadow: 0 0 30px #ff6a00aa;
@@ -622,162 +698,212 @@ hr{
     color: var(--2nd);
     background: var(--1st);
     border: none;
-    text-align: center;
+    text-align: center
 }
-.n-m{
-    opacity: 0;
+
+.n-m {
+    opacity: 0
 }
-.c-arrow{
-    transform: rotate(270deg);
+
+
+.c{
+    color: var(--2nd);
+    font-size: var(--font-tiny);
+    text-decoration: none;
+}
+.c:hover{
+    color: var(--2nd);
+    transition: 0.2s linear
+}
+.c-arrow {
+    transform: rotate(0deg);
     position: absolute;
-    top: 4vh;
+    font-size: var(--font-tiny);
+    top: 6vh;
     left: 2vw;
-    z-index: 1000;
+    z-index: 1000
 }
 @media (max-width:900px) {
-    
-    
     .bar-container {
         width: 100px;
-        height: 10px;
+        height: 10px
     }
-    .loader-text{
-        font-size: var(--font-small-ad);
+
+    .loader-text {
+        font-size: var(--font-small-ad)
     }
-    span h2{
-        font-size: var(--font-tiny);
+
+    span h2 {
+        font-size: var(--font-tiny)
     }
-    .upper{
-        height: 80vh;
+
+    .upper {
+        height: 80vh
     }
-    .lower{
-        height: 20vh;
+
+    .lower {
+        height: 20vh
     }
+
     .hero-text {
         height: 100%;
         font-size: 17vw;
         flex-direction: column;
         justify-content: start;
-        align-items: start;
+        align-items: start
     }
+
     .text {
         height: 52%;
         width: 100%;
         display: flex;
         align-items: center;
-        flex-direction: column;
+        flex-direction: column
     }
-    .lower-text{
-        display: none;
+
+    .lower-text {
+        display: none
     }
-    .btn{
-        font-size: var(--font-mini);
+
+    .btn {
+        font-size: var(--font-mini)
     }
-    .menu-i{
-        padding: 2vw;
+
+    .menu-i {
+        padding: 2vw
     }
-    .head{
+
+    .head {
         font-size: var(--font-large-ad);
-        padding: 40px 0;
+        padding: 40px 0
     }
-    .test-head h1{
+
+    .test-head h1 {
         font-size: var(--font-small);
-        padding: 0;
+        padding: 0
     }
-    .brand{
-        font-size: var(--font-tiny);
+
+    .brand {
+        font-size: var(--font-tiny)
     }
-    .works{
-        gap: 20px;
+
+    .works {
+        gap: 20px
     }
-    .work .type{
-        font-size: var(--font-mini);
+
+    .work .type {
+        font-size: var(--font-mini)
     }
-    .testimonials{
-        gap: 20px;
+
+    .testimonials {
+        gap: 20px
     }
-    .testimonial{
-        
+
+    .testimonial {
         width: 50vw;
-        padding: 10px;
+        padding: 10px
     }
-    
-    .work-row{
+
+    .work-row {
         align-items: center;
         flex-direction: column;
-        gap: 20px;
+        gap: 20px
     }
-    .o-link{
-        font-size: var(--font-small);
+
+    .o-link {
+        font-size: var(--font-small)
     }
-    .copy{
-        font-size: var(--font-mini);
+
+    .copy {
+        font-size: var(--font-mini)
     }
-    .monial{
-        font-size: var(--font-mini);
+
+    .monial {
+        font-size: var(--font-mini)
     }
+
     .profile {
-        gap: 5px;
+        gap: 5px
     }
-    .profession{
-        font-size: var(--font-tiny-mini);
+
+    .profession {
+        font-size: var(--font-tiny-mini)
     }
-    .m-profession{
-        font-size: 13px;
+
+    .m-profession {
+        font-size: 13px
     }
-    .a-name{
-        font-size: var(--font-tiny-ad);
+
+    .a-name {
+        font-size: var(--font-tiny-ad)
     }
+
     .services {
         font-size: 5.5vw;
-        gap: 3vw;
+        gap: 3vw
     }
-    .c-type{
-        font-size: var(--font-tiny-mini);
+
+    .c-type {
+        font-size: var(--font-tiny-mini)
     }
+
     .contact-bt {
         font-size: 3vw;
-        padding: 10px 30px;
+        padding: 10px 30px
     }
+    .c,.c-arrow{
+        font-size: var(--font-tiny-mini)
+    }
+    
 }
-@media (max-width: 1100px){
+
+@media (max-width:1100px) {
     .member {
-        
         width: 100%;
         flex-direction: column;
         gap: 30px;
-        /* align-items: flex-start; */
         top: -50%;
         height: auto;
-        background: var(--2nd);
+        background: var(--2nd)
     }
-    .m{
-        width: 95%;
+
+    .m {
+        width: 95%
     }
-    .about .monial{
-        height: 80%;
+
+    .about .monial {
+        height: 80%
     }
-    .a-profile{
-        width: 95%;
+
+    .a-profile {
+        width: 95%
     }
-    .info{
+
+    .info {
         display: flex;
-        
-        flex-direction: column;
+        flex-direction: column
     }
-    .tools,.hobbies,.dev {
-        height: auto;
+
+    .tools,
+    .hobbies,
+    .dev {
+        height: auto
     }
-    .txt{
-        font-size: var(--font-mini);
+
+    .txt {
+        font-size: var(--font-mini)
     }
 }
+
 @media (max-width:600px) {
-    .one,.two, .three{
-        background-position: -80px center;
+
+    .one,
+    .two,
+    .three {
+        background-position: -80px center
     }
-    .text{
-        height: 37%;
+
+    .text {
+        height: 37%
     }
- 
 }
