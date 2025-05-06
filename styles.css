@@ -20,7 +20,7 @@
 }
 :root{
     --1st: #131313;
-    --2nd: rgb(224, 222, 222);
+    --2nd: rgb(221, 221, 221);
     --3rd: #111196;
     --4th: linear-gradient(to top,#000 ,#c18d2c );
     --5th: #c17605;
@@ -445,6 +445,7 @@ hr{
     height: 50vh;
     background: var(--2nd);
 }
+
 .member-row {
     padding: 50px;
     gap: 50px;
