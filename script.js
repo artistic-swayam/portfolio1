@@ -5,10 +5,11 @@ if (navigator.userAgent.includes("Instagram")) {
 const whole = document.querySelector('.whole');
 const loader = document.querySelector('.loader');
 const services = document.querySelector('.services');
-gsap.to("#bar", {
+const tl = gsap.timeline();
+gsap.registerPlugin(ScrollTrigger);
+tl.to("#bar", {
   width: "100%",
-  duration: 10,//8
-  ease: "ease.inOut",
+  duration: 1,//8
   onComplete: function() {
     console.log("Loading complete!");
     loader.style.display = "none";
@@ -21,14 +22,13 @@ gsap.to("#bar", {
 });
 
 
-const tl = gsap.timeline();
-gsap.registerPlugin(ScrollTrigger);
+
 
 //gsap animation
 let menuAnimation = gsap.to(".menu-i", {
     opacity: 1,
     duration: 0.5,
-    paused: true,  // Initially paused
+    paused: true, 
   });
 let headAnimation1 = gsap.from(".contact-head", {
     opacity: 0,
@@ -55,16 +55,26 @@ let headAnimation1 = gsap.from(".contact-head", {
     },
   });
   gsap.utils.toArray('.work').forEach((workEl) => {
-    gsap.from(workEl, {
+    tl.from(workEl, {
       scrollTrigger: {
         trigger: workEl,
-        start: "top 70%", // When the top of the element hits 80% of viewport
+        start: "top 70%",
+        scrub: true // When the top of the element hits 80% of viewport
       },
       opacity: 0,
-      y: 50,
       duration: 0.8,
-      ease: "power2.out"
+      ease: "power2.out",
     });
+  });
+  tl.from(".about", {
+    scrollTrigger: {
+      trigger: ".about",
+      start: "top 70%",
+      scrub: true // When the top of the element hits 80% of viewport
+    },
+    opacity: 0,
+    duration: 0.8,
+    ease: "power2.out",
   });
      //menu animation
 const menubtn = document.querySelector('.menu-i');
@@ -86,9 +96,9 @@ off.addEventListener('click',()=>{
   menu.classList.toggle('active');
   off.classList.toggle('active');
   if (!off.classList.contains('active'))  {
-    gsap.to(".o-link",{duration: 0.2,stagger:0.2,y:"0", opacity: 0})
-    gsap.to('.overlay', { duration: 0.2, opacity: 0 });
-    gsap.to('.calendly-badge-content', { duration: 0, opacity: 1 });
+    tl.to(".o-link",{duration: 0.2,stagger:0.2,y:"0", opacity: 0})
+    tl.to('.overlay', { duration: 0.2, opacity: 0 });
+    tl.to('.calendly-badge-content', { duration: 0, opacity: 1 });
   }
 })
 links.forEach(link => {
@@ -98,14 +108,13 @@ links.forEach(link => {
 });
      //text reveal
     
-     
 const splitTypes = document.querySelectorAll(".reveal");
 splitTypes.forEach((char,i)=>{
 
   
   const text = new SplitType(char,{types:"chars"});
   console.log(text);
-  gsap.from(text.chars,{
+  tl.from(text.chars,{
     scrollTrigger:{
       trigger:char,
       start:"top 80%",
@@ -117,7 +126,7 @@ splitTypes.forEach((char,i)=>{
   })
 })
 
-gsap.to(".testimonials",{
+tl.to(".testimonials",{
   scrollTrigger:{
     trigger:".testimonials",
     start:"top 30%",
@@ -130,7 +139,7 @@ gsap.to(".testimonials",{
   x:"-150%",
 })
 
-gsap.to(".m",{
+tl.to(".m",{
   scrollTrigger:{
     trigger:".member-row",
     start:"top 5%",
@@ -146,8 +155,7 @@ splitY.forEach((char,i)=>{
 
   
   const text = new SplitType(char,{types:"chars"});
-  console.log(text);
-  gsap.from(text.chars,{
+  tl.from(text.chars,{
     scrollTrigger:{
       trigger:char,
       start:"top 80%",
@@ -160,7 +168,7 @@ splitY.forEach((char,i)=>{
     
     //y:"50%",
     onComplete: () => {
-      gsap.to(".left",{
+      tl.to(".left",{
         scrollTrigger:{
           trigger:".services",
           start:"top -5%",
@@ -172,7 +180,7 @@ splitY.forEach((char,i)=>{
         opacity:0.2,
          // move it up slowly
       }),
-      gsap.to(".right",{
+      tl.to(".right",{
         scrollTrigger:{
           trigger:".services",
           start:"top -5%",
@@ -192,7 +200,7 @@ splitY.forEach((char,i)=>{
 
 const mm = gsap.matchMedia();
         mm.add("(max-width:800px)",()=>{
-          gsap.to(".testimonials",{
+          tl.to(".testimonials",{
             scrollTrigger:{
               trigger:".testimonials",
               start:"top 30%",
@@ -215,21 +223,5 @@ function raf(time) {
 }
 requestAnimationFrame(raf)
 
-const works = document.querySelectorAll('.work-row')
 
-lenis.on('scroll', () => {
-  const winHeight = window.innerHeight
-  works.forEach(work => {
-    const rect = work.getBoundingClientRect()
-    const middle = rect.top + rect.height / 2
-    const scrollProgress = (middle - winHeight / 2) / winHeight
-
-    const parallax = scrollProgress * 40// bumped from 50 to 80 🔥
-
-    if (rect.top < winHeight && rect.bottom > 0) {
-      work.style.backgroundPosition = `center ${parallax}px`
-      work.style.backgroundSize = 'cover'
-    }
-  })
-})
 
