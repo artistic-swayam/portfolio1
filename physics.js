@@ -74,12 +74,16 @@ function draw() {
 class Word {
   constructor(x, y, word) {
     this.word = word;
-    this.textSize = windowWidth < 600 ? 14 : 20; // Smaller text size
+
+    // Bigger text and box for PC
+    const isMobile = windowWidth < 600;
+    this.textSize = isMobile ? 14 : 28; // increased from 20 to 28
 
     textFont('SF Pro Display');
     textSize(this.textSize);
-    this.width = textWidth(this.word) + 20; // Reduced horizontal padding
-    this.height = 36; // Reduced height
+
+    this.width = textWidth(this.word) + (isMobile ? 20 : 40); // more padding on PC
+    this.height = isMobile ? 36 : 50; // taller on PC
 
     this.body = Bodies.rectangle(x, y, this.width, this.height);
     World.add(world, this.body);
@@ -94,9 +98,9 @@ class Word {
     rectMode(CENTER);
 
     fill("#13131b");
-    
+
     strokeWeight(1);
-    rect(0, 0, this.width, this.height, 40); // slightly smaller corner radius
+    rect(0, 0, this.width, this.height, 40);
 
     noStroke();
     textFont('SF Pro Display');
@@ -107,6 +111,7 @@ class Word {
     pop();
   }
 }
+
 
 
 // Force apply on hover
