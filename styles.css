@@ -663,7 +663,10 @@ hr {
 
 .contact-txt {
     position: relative;
-    z-index: 1000
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
 }
 
 .contact-head {
@@ -677,7 +680,7 @@ hr {
 .c-type {
     z-index: 100;
     text-align: center;
-    font-size: var(--font-mini);
+    font-size: var(--font-mini)
 }
 
 #bgCanvas {
@@ -705,16 +708,17 @@ hr {
     opacity: 0
 }
 
-
-.c{
-    color: var(--2nd);
+.c {
+    color: #7A7A7A;
     font-size: var(--font-tiny);
-    text-decoration: none;
+    text-decoration: none
 }
-.c:hover{
+
+.c:hover {
     color: var(--2nd);
     transition: 0.2s linear
 }
+
 .c-arrow {
     transform: rotate(0deg);
     position: absolute;
@@ -723,6 +727,7 @@ hr {
     left: 2vw;
     z-index: 1000
 }
+
 @media (max-width:900px) {
     .bar-container {
         width: 100px;
@@ -851,10 +856,10 @@ hr {
         font-size: 3vw;
         padding: 10px 30px
     }
-    .c,.c-arrow{
+
+    .c-arrow {
         font-size: var(--font-tiny-mini)
     }
-    
 }
 
 @media (max-width:1100px) {
