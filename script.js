@@ -59,11 +59,13 @@ let headAnimation1 = gsap.from(".contact-head", {
       scrollTrigger: {
         trigger: workEl,
         start: "top 70%",
-        scrub: true // When the top of the element hits 80% of viewport
+        scrub: true, // When the top of the element hits 80% of viewport
+  // When the top of the element hits 80% of viewport
       },
       opacity: 0,
+      y: 50,
       duration: 0.8,
-      ease: "power2.out",
+
     });
   });
   tl.from(".about", {
@@ -73,6 +75,7 @@ let headAnimation1 = gsap.from(".contact-head", {
       scrub: true // When the top of the element hits 80% of viewport
     },
     opacity: 0,
+    y: 50,
     duration: 0.8,
     ease: "power2.out",
   });
@@ -96,9 +99,9 @@ off.addEventListener('click',()=>{
   menu.classList.toggle('active');
   off.classList.toggle('active');
   if (!off.classList.contains('active'))  {
-    tl.to(".o-link",{duration: 0.2,stagger:0.2,y:"0", opacity: 0})
-    tl.to('.overlay', { duration: 0.2, opacity: 0 });
-    tl.to('.calendly-badge-content', { duration: 0, opacity: 1 });
+    gsap.to(".o-link",{duration: 0.2,stagger:0.2,y:"0", opacity: 0})
+    gsap.to('.overlay', { duration: 0.2, opacity: 0 });
+    gsap.to('.calendly-badge-content', { duration: 0, opacity: 1 });
   }
 })
 links.forEach(link => {
