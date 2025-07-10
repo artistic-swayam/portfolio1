@@ -4,10 +4,6 @@
     box-sizing: border-box
 }
 
-::-webkit-scrollbar {
-    display: none
-}
-
 @font-face {
     font-family: 'SF Pro Display';
     src: url(SFPRODISPLAYBOLD.otf) format('opentype');
@@ -106,6 +102,11 @@
     animation: pulseGlow 4s ease-in-out infinite
 }
 
+.zero {
+    background-image: url(m0.png);
+    background-size: cover
+}
+
 .one {
     background-image: url(m1.png);
     background-size: cover
@@ -117,7 +118,7 @@
 }
 
 .three {
-    background-image: url(m2.PNG);
+    background-image: url(m2.png);
     background-size: cover
 }
 
